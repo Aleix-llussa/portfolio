@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Portada con vídeo -->
+  <div class="hero">
+    <video autoplay muted loop id="videoFondo">
+      <source src="video/fondo.mp4" type="video/mp4" />
+    </video>
+    <button id="nombreBtn">TU NOMBRE</button>
+  </div>
+
+  <!-- Menú -->
+  <div id="menu" class="hidden">
+    <button class="menu-btn" data-section="about">About</button>
+    <button class="menu-btn" data-section="commissioned">Commissioned</button>
+    <button class="menu-btn" data-section="portfolio">Portfolio</button>
+  </div>
+
+  <!-- Secciones -->
+  <div id="about" class="modal hidden">
+    <div class="modal-content">
+      <button class="close">✖</button>
+      <h2>Sobre mí</h2>
+      <p>Aquí va tu descripción.</p>
+      <p>Contacto: tuemail@ejemplo.com</p>
+    </div>
+  </div>
+
+  <div id="commissioned" class="scroll-section hidden">
+    <div class="overlay-title">COMMISSIONED</div>
+    <div class="gallery">
+      <!-- Cada div con fondo será una imagen -->
+      <div class="slide" style="background-image: url('img/proyecto1.jpg');" data-modal="modal1"></div>
+      <div class="slide" style="background-image: url('img/proyecto2.jpg');" data-modal="modal2"></div>
+    </div>
+  </div>
+
+  <!-- Modales de proyectos -->
+  <div id="modal1" class="modal hidden">
+    <div class="modal-content">
+      <button class="close">✖</button>
+      <h2>Proyecto 1</h2>
+      <img src="img/proyecto1.jpg" />
+      <p>Texto del proyecto 1</p>
+    </div>
+  </div>
+
+  <!-- Puedes añadir más modales como este -->
+
+  <script src="script.js"></script>
+</body>
+</html>
